@@ -186,5 +186,52 @@
 
     <script src="registry.js"></script>
     <script src="app.js"></script>
+    <div id="visitor-stats" style="margin: 30px auto; padding: 15px; max-width: 500px; background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 8px; text-align: center; font-family: sans-serif;">
+    <h4 style="margin: 0 0 10px 0; color: #495057; font-size: 15px;">📊 Статистика посещений тренажера</h4>
+    <div style="display: flex; justify-content: space-around; font-size: 13px; color: #6c757d;">
+        <div>Сегодня: <b id="stat-day" style="color: #007bff;">1</b></div>
+        <div>За месяц: <b id="stat-month" style="color: #28a745;">1</b></div>
+        <div>Всего визитов: <b id="stat-total" style="color: #dc3545;">1</b></div>
+    </div>
+</div>
+
+<script>
+    // Простая логика подсчета визитов через localStorage
+    function initVisitorCounter() {
+        let stats = JSON.parse(localStorage.getItem('ent_visitor_stats') || '{"day": 0, "month": 0, "total": 0, "lastDate": ""}');
+        
+        let todayStr = new Date().toDateString(); // текущая дата (например, "Thu Nov 12 2026")
+        let currentMonth = new Date().getMonth(); // текущий месяц
+
+        // Если сменился день — сбрасываем счетчик «сегодня» (или инкрементируем для каждого уникального сеанса)
+        if (stats.lastDate !== todayStr) {
+            stats.day = 1;
+            stats.lastDate = todayStr;
+            stats.total += 1;
+            stats.month += 1;
+        } else {
+            // Если тот же день, но пользователь открыл сайт повторно или обновил страницу
+            // Защита от накрутки F5: считаем за новый визит только если прошло больше 30 минут, либо просто считаем клики
+            let lastVisitTime = localStorage.getItem('ent_last_visit_time') || 0;
+            let now = new Date().getTime();
+            
+            if (now - lastVisitTime > 30 * 60 * 1000) { // 30 минут
+                stats.day += 1;
+                stats.total += 1;
+                localStorage.setItem('ent_last_visit_time', now);
+            }
+        }
+
+        localStorage.setItem('ent_visitor_stats', JSON.stringify(stats));
+
+        // Выводим данные на экран
+        document.getElementById('stat-day').innerText = stats.day;
+        document.getElementById('stat-month').innerText = stats.month > 0 ? stats.month : 1;
+        document.getElementById('stat-total').innerText = stats.total > 0 ? stats.total : 1;
+    }
+
+    // Запускаем при загрузке страницы
+    window.addEventListener('DOMContentLoaded', initVisitorCounter);
+</script>
 </body>
 </html>
