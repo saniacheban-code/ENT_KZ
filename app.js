@@ -10,6 +10,39 @@ function getSubjectById(id) {
   return SUBJECTS_REGISTRY.find((s) => s.id === id) || null;
 }
 
+function renderMath() {
+  if (typeof renderMathInElement === "function") {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false }
+      ],
+      throwOnError: false
+    });
+  }
+}
+
+function shuffleQuestionOptions(rawQuestions) {
+  return rawQuestions.map((q) => {
+    const indexed = q.options.map((text, idx) => ({
+      text,
+      isCorrect: idx === Number(q.correct)
+    }));
+    for (let i = indexed.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const tmp = indexed[i];
+      indexed[i] = indexed[j];
+      indexed[j] = tmp;
+    }
+    const newCorrect = indexed.findIndex((item) => item.isCorrect);
+    return {
+      ...q,
+      options: indexed.map((item) => item.text),
+      correct: newCorrect >= 0 ? newCorrect : 0
+    };
+  });
+}
+
 function renderSubjects() {
   const app = document.getElementById("app");
   if (!app) return;
@@ -23,15 +56,16 @@ function renderSubjects() {
     (subj) => `
       <button type="button" class="subject-card" onclick="selectSubject('${subj.id}')">
         <div class="subject-title">${escapeHtml(subj.name)}</div>
-        <div class="subject-meta">Вариантов: ${subj.variants.length} • Вопросов в тесте: 20</div>
+        <div class="subject-meta">Вариантов: ${subj.variants.length} • Вопросов: ${subj.questionCount}</div>
       </button>
     `
   ).join("");
 
   app.innerHTML = `
     <section class="panel">
+      <div class="version-badge">Версия 2.0 • Формат ЕНТ РК</div>
       <h2>Выберите предмет</h2>
-      <p class="subtitle">Каждый вариант содержит 20 вопросов с мгновенной проверкой и подробным разбором.</p>
+      <p class="subtitle">Количество вопросов и система оценивания соответствуют спецификации НЦТ РК. Варианты ответов перемешиваются при каждом запуске.</p>
       <div class="subjects-grid">${cardsHtml}</div>
     </section>
   `;
@@ -56,7 +90,7 @@ function selectSubject(subjectId) {
   app.innerHTML = `
     <section class="panel">
       <h2>${escapeHtml(subj.name)}</h2>
-      <p class="subtitle">Выберите вариант теста (20 вопросов):</p>
+      <p class="subtitle">Выберите вариант теста (вопросов в варианте: ${subj.questionCount}):</p>
       <div class="variants-row">${buttonsHtml}</div>
       <div class="actions-row">
         <button type="button" class="btn btn-secondary" onclick="renderSubjects()">← Назад к выбору предметов</button>
@@ -76,19 +110,19 @@ async function loadVariant(subjectId, variantNum) {
   `;
 
   try {
-    const url = `${subj.folder}/v${variantNum}.json?t=${Date.now()}`;
+    const url = `./${subj.folder}/v${variantNum}.json?v=2.0&t=${Date.now()}`;
     const response = await fetch(url, { cache: "no-store" });
     if (!response.ok) {
-      throw new Error(`HTTP ${response.status}`);
+      throw new Error(`Файл не найден (HTTP ${response.status}). Убедитесь, что папка "${subj.folder}" загружена в корень репозитория.`);
     }
     const data = await response.json();
     if (!data || !Array.isArray(data.questions) || data.questions.length === 0) {
-      throw new Error("Некорректный формат файла варианта");
+      throw new Error("Некорректная структура файла варианта.");
     }
 
     state.subject = subj;
     state.variant = variantNum;
-    state.questions = data.questions;
+    state.questions = shuffleQuestionOptions(data.questions);
     state.userAnswers = {};
     state.submitted = false;
     renderQuiz();
@@ -183,6 +217,7 @@ function renderQuiz() {
     </section>
   `;
   updateAnsweredCounter();
+  renderMath();
 }
 
 function checkQuiz() {
@@ -236,7 +271,7 @@ function checkQuiz() {
       expBox.style.display = "block";
       expBox.className = `explanation-box ${isCorrect ? "exp-ok" : "exp-err"}`;
       expBox.innerHTML = `
-        <div><strong>${userStatus}</strong></div>
+        <div><strong>${escapeHtml(userStatus)}</strong></div>
         <div><strong>Правильный ответ:</strong> ${expectedLetter}. ${escapeHtml(expectedText)}</div>
         ${q.explanation ? `<div class="exp-text">${escapeHtml(q.explanation)}</div>` : ""}
       `;
@@ -261,6 +296,7 @@ function checkQuiz() {
     submitBtn.disabled = true;
     submitBtn.textContent = "Тест проверен";
   }
+  renderMath();
 }
 
 function escapeHtml(value) {

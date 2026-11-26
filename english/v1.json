@@ -1,447 +1,649 @@
 {
-    "variant": 1,
-    "questions": [
-        {
-            "id": 1,
-            "type": "single",
-            "maxPoints": 1,
-            "topic": "Grammar: Tenses",
-            "text": "Choose the correct option: 'Look! The children ________ football in the yard.'",
-            "options": ["are playing", "play", "played", "is playing", "have played"],
-            "correct": 0,
-            "explanation": "Слово-маркер 'Look!' указывает на действие, происходящее в момент речи, поэтому используется время Present Continuous (are playing)."
-        },
-        {
-            "id": 2,
-            "type": "single",
-            "maxPoints": 1,
-            "topic": "Grammar: Articles",
-            "text": "Choose the correct article: 'Kyiv is ________ capital of Ukraine.'",
-            "options": ["the", "a", "an", "zero article", "this"],
-            "correct": 0,
-            "explanation": "Перед существительными с определением, указывающим на единственность (например, столица чего-либо), ставится определенный артикль 'the'."
-        },
-        {
-            "id": 3,
-            "type": "single",
-            "maxPoints": 1,
-            "topic": "Vocabulary",
-            "text": "Choose the synonym for the word 'to achieve':",
-            "options": ["to accomplish", "to fail", "to lose", "to prevent", "to ignore"],
-            "correct": 0,
-            "explanation": "Глагол 'to achieve' (добиваться, достигать) синонимичен глаголу 'to accomplish' (выполнять, достигать)."
-        },
-        {
-            "id": 4,
-            "type": "single",
-            "maxPoints": 1,
-            "topic": "Grammar: Modals",
-            "text": "Complete the sentence: 'You ________ park your car here. It's strictly forbidden.'",
-            "options": ["mustn't", "needn't", "don't have to", "should", "can"],
-            "correct": 0,
-            "explanation": "Модальный глагол 'mustn't' выражает строгий запрет (запрещено парковаться)."
-        },
-        {
-            "id": 5,
-            "type": "single",
-            "maxPoints": 1,
-            "topic": "Grammar: Passive Voice",
-            "text": "Choose the correct Passive Voice form: 'They built this bridge in 1995.'",
-            "options": [
-                "This bridge was built in 1995.",
-                "This bridge is built in 1995.",
-                "This bridge has been built in 1995.",
-                "This bridge builds in 1995.",
-                "This bridge was building in 1995."
-            ],
-            "correct": 0,
-            "explanation": "Времени Past Simple (built) в пассивном залоге соответствует конструкция was/were + V3 (was built)."
-        },
-        {
-            "id": 6,
-            "type": "single",
-            "maxPoints": 1,
-            "topic": "Grammar: Pronouns",
-            "text": "Complete the sentence: 'She did the whole project by ________.'",
-            "options": ["herself", "himself", "myself", "itself", "themselves"],
-            "correct": 0,
-            "explanation": "Устойчивое выражение 'by oneself' с местоимением 'she' принимает возвратную форму 'by herself' (самостоятельно)."
-        },
-        {
-            "id": 7,
-            "type": "single",
-            "maxPoints": 1,
-            "topic": "Vocabulary",
-            "text": "Choose the antonym for the word 'ancient':",
-            "options": ["modern", "old", "antique", "historic", "age-old"],
-            "correct": 0,
-            "explanation": "Антонимом к слову 'ancient' (древний) является 'modern' (современный)."
-        },
-        {
-            "id": 8,
-            "type": "single",
-            "maxPoints": 1,
-            "topic": "Grammar: Reported Speech",
-            "text": "Choose the correct indirect speech: He said, 'I am reading a book.'",
-            "options": [
-                "He said that he was reading a book.",
-                "He said that he is reading a book.",
-                "He said that he read a book.",
-                "He told me he has read a book.",
-                "He said that I was reading a book."
-            ],
-            "correct": 0,
-            "explanation": "При переходе из прямой речи в косвенную (приглагол в прошедшем времени 'said') Present Continuous меняется на Past Continuous (was reading)."
-        },
-        {
-            "id": 9,
-            "type": "single",
-            "maxPoints": 1,
-            "topic": "Grammar: Conditionals",
-            "text": "Complete the Second Conditional sentence: 'If I had a lot of money, I ________ travel around the world.'",
-            "options": ["would", "will", "can", "have", "would have"],
-            "correct": 0,
-            "explanation": "Во втором типе условных предложений (If + Past Simple) в главной части используется модальный глагол 'would' + инфинитив."
-        },
-        {
-            "id": 10,
-            "type": "single",
-            "maxPoints": 1,
-            "topic": "Grammar: Gerund / Infinitive",
-            "text": "Choose the correct form: 'I enjoy ________ books in the evening.'",
-            "options": ["reading", "to read", "read", "to reading", "readed"],
-            "correct": 0,
-            "explanation": "После глагола 'enjoy' всегда используется герундий (глагол с окончанием -ing)."
-        },
-        {
-            "id": 11,
-            "type": "single",
-            "maxPoints": 1,
-            "topic": "Prepositions",
-            "text": "Complete the phrase: 'My birthday is ________ October.'",
-            "options": ["in", "on", "at", "by", "to"],
-            "correct": 0,
-            "explanation": "Перед месяцами и годами в английском языке используется предлог времени 'in'."
-        },
-        {
-            "id": 12,
-            "type": "single",
-            "maxPoints": 1,
-            "topic": "Phrasal Verbs",
-            "text": "What does the phrasal verb 'to give up' mean?",
-            "options": ["To stop trying / to surrender", "To distribute", "To start a journey", "To tolerate", "To return"],
-            "correct": 0,
-            "explanation": "Фразовый глагол 'to give up' означает бросить привычку, сдаться или прекратить попытки."
-        },
-        {
-            "id": 13,
-            "type": "single",
-            "maxPoints": 1,
-            "topic": "Grammar: Comparatives",
-            "text": "Complete the sentence: 'This car is ________ than that one.'",
-            "options": ["more expensive", "expensive", "most expensive", "expensiver", "as expensive"],
-            "correct": 0,
-            "explanation": "Многосложные прилагательные образуют сравнительную степень с помощью слова 'more' (more expensive)."
-        },
-        {
-            "id": 14,
-            "type": "single",
-            "maxPoints": 1,
-            "topic": "Vocabulary",
-            "text": "Choose the correct word: 'A person who writes books is an ________.'",
-            "options": ["author", "actor", "artist", "architect", "anchor"],
-            "correct": 0,
-            "explanation": "Автор книги по-английски называется 'author'."
-        },
-        {
-            "id": 15,
-            "type": "single",
-            "maxPoints": 1,
-            "topic": "Grammar: Relative Clauses",
-            "text": "Complete the sentence: 'The man ________ helped me yesterday was a police officer.'",
-            "options": ["who", "which", "where", "whose", "what"],
-            "correct": 0,
-            "explanation": "Для замены одушевленного существительного (the man) в придаточном предложении используется относительное местоимение 'who'."
-        },
-        {
-            "id": 16,
-            "type": "single",
-            "maxPoints": 1,
-            "topic": "Grammar: Past Tenses",
-            "text": "Complete the sentence: 'When I came home, my mother ________ dinner.'",
-            "options": ["was cooking", "cooked", "had cooked", "cooks", "is cooking"],
-            "correct": 0,
-            "explanation": "Длительное действие в прошлом, прерванное другим кратким действием (when I came), выражается через Past Continuous (was cooking)."
-        },
-        {
-            "id": 17,
-            "type": "single",
-            "maxPoints": 1,
-            "topic": "Grammar: Quantifiers",
-            "text": "Choose the correct quantifier for uncountable nouns in negative sentences: 'We don't have ________ time left.'",
-            "options": ["much", "many", "few", "a few", "some"],
-            "correct": 0,
-            "explanation": "С неисчисляемыми существительными (time) в отрицательных предложениях используется местоимение 'much'."
-        },
-        {
-            "id": 18,
-            "type": "single",
-            "maxPoints": 1,
-            "topic": "Vocabulary: Idioms",
-            "text": "What does the idiom 'cost an arm and a leg' mean?",
-            "options": ["To be extremely expensive", "To be very cheap", "To be dangerous", "To be useless", "To be easy"],
-            "correct": 0,
-            "explanation": "Идиома 'cost an arm and a leg' означает стоить очень дорого, целое состояние."
-        },
-        {
-            "id": 19,
-            "type": "single",
-            "maxPoints": 1,
-            "topic": "Grammar: Future Tenses",
-            "text": "Complete the sentence: 'I promise I ________ you tomorrow.'",
-            "options": ["will help", "am helping", "help", "helped", "am going to help"],
-            "correct": 0,
-            "explanation": "Для выражения спонтанных решений, обещаний или предложений используется время Future Simple (will help)."
-        },
-        {
-            "id": 20,
-            "type": "single",
-            "maxPoints": 1,
-            "topic": "Word Formation",
-            "text": "Form a noun from the verb 'to decide':",
-            "options": ["decision", "decisive", "decided", "deciding", "decisiveness"],
-            "correct": 0,
-            "explanation": "Существительное от глагола 'decide' образуется с помощью суффикса -sion — 'decision' (решение)."
-        },
-        {
-            "id": 21,
-            "type": "single",
-            "maxPoints": 1,
-            "topic": "Grammar: Perfect Tenses",
-            "text": "Complete the sentence: 'I ________ never ________ to London.'",
-            "options": ["have / been", "has / been", "did / go", "have / gone", "was / being"],
-            "correct": 0,
-            "explanation": "Для выражения жизненного опыта используется Present Perfect: I have never been to London."
-        },
-        {
-            "id": 22,
-            "type": "single",
-            "maxPoints": 1,
-            "topic": "Vocabulary",
-            "text": "Choose the correct preposition: 'She is afraid ________ spiders.'",
-            "options": ["of", "at", "with", "on", "from"],
-            "correct": 0,
-            "explanation": "Прилагательное 'afraid' в устойчивых сочетаниях управляется предлогом 'of' (afraid of)."
-        },
-        {
-            "id": 23,
-            "type": "single",
-            "maxPoints": 1,
-            "topic": "Grammar: Modal Verbs",
-            "text": "Complete the sentence: 'You look tired. You ________ go to bed early tonight.'",
-            "options": ["should", "mustn't", "can't", "need", "might not"],
-            "correct": 0,
-            "explanation": "Для совета или рекомендации используется модальный глагол 'should' (тебе следует)."
-        },
-        {
-            "id": 24,
-            "type": "single",
-            "maxPoints": 1,
-            "topic": "Vocabulary",
-            "text": "What is the synonym of 'to intelligent' / 'smart'?",
-            "options": ["clever", "foolish", "lazy", "slow", "dull"],
-            "correct": 0,
-            "explanation": "Слово 'clever' синонимично словам smart/intelligent (умный)."
-        },
-        {
-            "id": 25,
-            "type": "single",
-            "maxPoints": 1,
-            "topic": "Grammar: Reported Speech",
-            "text": "Choose the correct question in indirect speech: He asked me, 'Where do you live?'",
-            "options": [
-                "He asked me where I lived.",
-                "He asked me where do I live.",
-                "He asked me where did I live.",
-                "He asked me where I live.",
-                "He asked me what do I live."
-            ],
-            "correct": 0,
-            "explanation": "В косвенных вопросах порядок слов становится прямым, а время сдвигается назад (дополнительный вспомогательный глагол do убирается, а глагол переходит во вторую форму — lived)."
-        },
-        {
-            "id": 26,
-            "type": "single",
-            "maxPoints": 1,
-            "topic": "Grammar: Passive Voice",
-            "text": "Complete the sentence: 'English ________ all over the world.'",
-            "options": ["is spoken", "speaks", "is speaking", "spoken", "are spoken"],
-            "correct": 0,
-            "explanation": "Для регулярных действий в пассивном залоге используется Present Simple (is/are + V3) — English is spoken."
-        },
-        {
-            "id": 27,
-            "type": "single",
-            "maxPoints": 1,
-            "topic": "Prepositions",
-            "text": "Complete the sentence: 'We arrived ________ the airport late at night.'",
-            "options": ["at", "in", "on", "to", "by"],
-            "correct": 0,
-            "explanation": "Для небольших географических объектов, зданий и аэропортов/вокзалов используется предлог 'at' (arrived at the airport)."
-        },
-        {
-            "id": 28,
-            "type": "single",
-            "maxPoints": 1,
-            "topic": "Vocabulary",
-            "text": "Choose the word that doesn't fit the group (odd-one-out):",
-            "options": ["carrot", "apple", "potato", "cabbage", "cucumber"],
-            "correct": 1,
-            "explanation": "Яблоко (apple) — фрукт, а остальные варианты (морковь, картофель, капуста, огурец) — овощи."
-        },
-        {
-            "id": 29,
-            "type": "single",
-            "maxPoints": 1,
-            "topic": "Grammar: Conditionals",
-            "text": "Complete the First Conditional: 'If it rains tomorrow, we ________ at home.'",
-            "options": ["will stay", "stay", "would stay", "stayed", "are staying"],
-            "correct": 0,
-            "explanation": "В первом типе условных предложений в придаточном используется Present Simple (rains), а в главном — Future Simple (will stay)."
-        },
-        {
-            "id": 30,
-            "type": "single",
-            "maxPoints": 1,
-            "topic": "Grammar: Articles",
-            "text": "Choose the correct sentence:",
-            "options": [
-                "I have a dog and a cat. The dog is very friendly.",
-                "I have dog and cat. Dog is friendly.",
-                "I have the dog and a cat. A dog is friendly.",
-                "I have a dog and cat. Dog is friendly.",
-                "I have a dog and a cat. Dog is friendly."
-            ],
-            "correct": 0,
-            "explanation": "При первом упоминании исчисляемого предмета используется неопределенный артикль ('a dog'), а при повторном — определенный ('the dog')."
-        },
-        {
-            "id": 31,
-            "type": "single",
-            "maxPoints": 2,
-            "topic": "Reading Comprehension",
-            "text": "Context: 'Artificial Intelligence (AI) is developing rapidly in the 21st century. It helps automation in factories, medical diagnostics, and daily personal tasks. However, experts warn about job displacement and ethical concerns.' Question: According to the text, what is one of the main concerns regarding AI?",
-            "options": ["Job displacement and ethical issues", "It works too slowly", "It requires no electricity", "It can completely replace physical reality", "It is no longer developing"],
-            "correct": 0,
-            "explanation": "В тексте прямо указано на проблемы вытеснения рабочих мест (job displacement) и этические вопросы (ethical concerns)."
-        },
-        {
-            "id": 32,
-            "type": "single",
-            "maxPoints": 2,
-            "topic": "Reading Comprehension",
-            "text": "Based on the same text about Artificial Intelligence, where is AI NOT mentioned to be helpful?",
-            "options": ["Deep sea underwater breathing creation", "Factory automation", "Medical diagnostics", "Daily personal tasks", "Modern technologies"],
-            "correct": 0,
-            "explanation": "В тексте упоминаются фабрики, медицина и личные задачи, но ничего не говорится о создании подводного дыхания."
-        },
-        {
-            "id": 33,
-            "type": "single",
-            "maxPoints": 2,
-            "topic": "Contextual Grammar: Phrasal Verbs",
-            "text": "Context: 'Jane decided to ________ smoking because it was bad for her health.' Choose the correct phrasal verb.",
-            "options": ["give up", "give away", "take off", "look after", "turn down"],
-            "correct": 0,
-            "explanation": "По контексту (вредно для здоровья) Джейн решила бросить курить — фразовый глагол 'give up'."
-        },
-        {
-            "id": 34,
-            "type": "single",
-            "maxPoints": 2,
-            "topic": "Contextual Grammar: Phrasal Verbs",
-            "text": "Context: 'Could you please ________ the lights? It's getting dark.' Choose the correct phrasal verb.",
-            "options": ["turn on", "turn off", "turn down", "turn up", "turn away"],
-            "correct": 0,
-            "explanation": "Так как становится темно, нужно включить свет — фразовый глагол 'turn on'."
-        },
-        {
-            "id": 35,
-            "type": "single",
-            "maxPoints": 2,
-            "topic": "Contextual Vocabulary",
-            "text": "Context: 'Global warming leads to severe climate changes, melting glaciers, and rising sea levels.' What is the primary cause of global warming discussed in modern ecological texts?",
-            "options": ["Greenhouse gas emissions from human activity", "Natural solar cooling", "Ocean freezing", "Increasing heavy rains in deserts", "Too many forests"],
-            "correct": 0,
-            "explanation": "Научный контекст глобального потепления связывает его главным образом с выбросами парниковых газов."
-        },
-        {
-            "id": 36,
-            "type": "single",
-            "maxPoints": 2,
-            "topic": "Contextual Vocabulary",
-            "text": "Based on the text about global warming, what is the consequence of melting glaciers?",
-            "options": ["Rising sea levels", "Lower ocean temperatures", "More deserts worldwide", "No change in water amount", "Freezing of equatorial rivers"],
-            "correct": 0,
-            "explanation": "Текст указывает на прямую связь таяния ледников с поднятием уровня мирового океана (rising sea levels)."
-        },
-        {
-            "id": 37,
-            "type": "single",
-            "maxPoints": 2,
-            "topic": "Logical Completion",
-            "text": "Choose the best concluding sentence for a paragraph about healthy lifestyle: 'Regular physical exercise, balanced diet, and enough sleep are essential. Therefore, ________.'",
-            "options": [
-                "adopting these habits significantly improves your overall well-being",
-                "people should avoid eating any food at all",
-                "sleeping 2 hours a day is completely enough",
-                "sports cause severe health issues",
-                "health depends entirely on luck"
-            ],
-            "correct": 0,
-            "explanation": "Логическим выводом из тезисов о спорте, диете и сне является утверждение об улучшении общего самочувствия."
-        },
-        {
-            "id": 38,
-            "type": "single",
-            "maxPoints": 2,
-            "topic": "Logical Completion",
-            "text": "Choose the correct linking word: '________ it was raining heavily, they decided to go for a walk in the park.'",
-            "options": ["Although", "Because", "Despite of", "Therefore", "Unless"],
-            "correct": 0,
-            "explanation": "Для выражения уступки («несмотря на то, что шел дождь») используется союз 'Although'."
-        },
-        {
-            "id": 39,
-            "type": "single",
-            "maxPoints": 2,
-            "topic": "Situational English",
-            "text": "Situation: You are in a cafe and want to order a cup of coffee. What is the most polite way to say it to the waiter?",
-            "options": [
-                "I would like a cup of coffee, please.",
-                "Give me coffee right now!",
-                "Coffee, bring it.",
-                "I want coffee.",
-                "Do you have coffee or not?"
-            ],
-            "correct": 0,
-            "explanation": "Конструкция 'I would like...' является стандартным вежливым выражением просьбы в ресторане или кафе."
-        },
-        {
-            "id": 40,
-            "type": "single",
-            "maxPoints": 2,
-            "topic": "Situational English",
-            "text": "Situation: A tourist asks you for directions to the railway station, but you don't know the city well. What do you politely say?",
-            "options": [
-                "I'm sorry, I'm a stranger here myself.",
-                "Go away, I'm busy.",
-                "I know everything, but I won't tell you.",
-                "The station is closed forever.",
-                "Why are you asking me?"
-            ],
-            "correct": 0,
-            "explanation": "Вежливая фраза 'I'm sorry, I'm a stranger here myself' (Извините, я сам здесь приезжий) идеально подходит для этой ситуации."
-        }
-    ]
+  "version": "2.0",
+  "subject": "english",
+  "subjectName": "Английский язык",
+  "variant": 1,
+  "questionCount": 40,
+  "questions": [
+    {
+      "id": 1,
+      "type": "single",
+      "maxPoints": 1,
+      "topic": "Present Simple",
+      "text": "Choose the correct form: She ___ to school every day.",
+      "options": [
+        "going",
+        "is go",
+        "goes",
+        "go",
+        "gone"
+      ],
+      "correct": 2,
+      "explanation": "С местоимением 3-го лица ед. ч. (she) в Present Simple добавляется окончание -es."
+    },
+    {
+      "id": 2,
+      "type": "single",
+      "maxPoints": 1,
+      "topic": "Past Simple",
+      "text": "Choose the correct past form of the verb 'buy': Yesterday I ___ a new book.",
+      "options": [
+        "buying",
+        "bought",
+        "have bought",
+        "buyed",
+        "buys"
+      ],
+      "correct": 1,
+      "explanation": "Неправильный глагол buy в Past Simple имеет форму bought."
+    },
+    {
+      "id": 3,
+      "type": "single",
+      "maxPoints": 1,
+      "topic": "Articles",
+      "text": "Choose the correct article: Astana is ___ capital of Kazakhstan.",
+      "options": [
+        "-",
+        "the",
+        "an",
+        "some",
+        "a"
+      ],
+      "correct": 1,
+      "explanation": "С уникальными объектами и существительными с уточнением используется артикль the."
+    },
+    {
+      "id": 4,
+      "type": "single",
+      "maxPoints": 1,
+      "topic": "Prepositions",
+      "text": "Choose the right preposition: My birthday is ___ May.",
+      "options": [
+        "at",
+        "to",
+        "for",
+        "in",
+        "on"
+      ],
+      "correct": 3,
+      "explanation": "С названиями месяцев используется предлог in."
+    },
+    {
+      "id": 5,
+      "type": "single",
+      "maxPoints": 1,
+      "topic": "Comparison",
+      "text": "Choose the correct degree of comparison: This exercise is ___ than the previous one.",
+      "options": [
+        "easier",
+        "easy",
+        "more easy",
+        "easiest",
+        "most easy"
+      ],
+      "correct": 0,
+      "explanation": "Сравнительная степень односложных/двусложных на -y прилагательных образуется с помощью -ier."
+    },
+    {
+      "id": 6,
+      "type": "single",
+      "maxPoints": 1,
+      "topic": "Modal Verbs",
+      "text": "Choose the appropriate modal verb: You ___ cross the street when the light is red.",
+      "options": [
+        "may",
+        "can",
+        "mustn't",
+        "should",
+        "need"
+      ],
+      "correct": 2,
+      "explanation": "Строгий запрет выражается глаголом mustn't."
+    },
+    {
+      "id": 7,
+      "type": "single",
+      "maxPoints": 1,
+      "topic": "Present Perfect",
+      "text": "Complete the sentence: We ___ already ___ our homework.",
+      "options": [
+        "did / do",
+        "are / doing",
+        "had / do",
+        "has / done",
+        "have / done"
+      ],
+      "correct": 4,
+      "explanation": "Маркер already указывает на Present Perfect (have + V3)."
+    },
+    {
+      "id": 8,
+      "type": "single",
+      "maxPoints": 1,
+      "topic": "Passive Voice",
+      "text": "Choose the passive form: English ___ in many countries.",
+      "options": [
+        "speaks",
+        "spoke",
+        "is speaking",
+        "is spoken",
+        "has spoken"
+      ],
+      "correct": 3,
+      "explanation": "Настоящее простое время в страдательном залоге: is + V3 (spoken)."
+    },
+    {
+      "id": 9,
+      "type": "single",
+      "maxPoints": 1,
+      "topic": "Conditionals",
+      "text": "Complete First Conditional: If it ___ tomorrow, we will stay at home.",
+      "options": [
+        "rained",
+        "is raining",
+        "rain",
+        "rains",
+        "will rain"
+      ],
+      "correct": 3,
+      "explanation": "В придаточном условия 1-го типа используется Present Simple."
+    },
+    {
+      "id": 10,
+      "type": "single",
+      "maxPoints": 1,
+      "topic": "Pronouns",
+      "text": "Choose the correct pronoun: Is there ___ milk in the fridge?",
+      "options": [
+        "some",
+        "a few",
+        "any",
+        "many",
+        "these"
+      ],
+      "correct": 2,
+      "explanation": "В вопросительных предложениях с неисчисляемыми существительными употребляется any."
+    },
+    {
+      "id": 11,
+      "type": "single",
+      "maxPoints": 1,
+      "topic": "Vocabulary",
+      "text": "Find the antonym of the word 'ancient':",
+      "options": [
+        "historic",
+        "traditional",
+        "old",
+        "antique",
+        "modern"
+      ],
+      "correct": 4,
+      "explanation": "Ancient (древний) — антоним modern (современный)."
+    },
+    {
+      "id": 12,
+      "type": "single",
+      "maxPoints": 1,
+      "topic": "Plural Nouns",
+      "text": "Choose the correct plural form of 'child':",
+      "options": [
+        "childrens",
+        "children",
+        "childs",
+        "childes",
+        "child"
+      ],
+      "correct": 1,
+      "explanation": "Исключение: child — children."
+    },
+    {
+      "id": 13,
+      "type": "single",
+      "maxPoints": 1,
+      "topic": "Question Tags",
+      "text": "Choose the right tag: You like coffee, ___?",
+      "options": [
+        "do you",
+        "don't you",
+        "won't you",
+        "didn't you",
+        "aren't you"
+      ],
+      "correct": 1,
+      "explanation": "К утверждению в Present Simple задается отрицательный хвостик don't you."
+    },
+    {
+      "id": 14,
+      "type": "single",
+      "maxPoints": 1,
+      "topic": "Gerund / Infinitive",
+      "text": "Complete the sentence: She enjoys ___ books in the evening.",
+      "options": [
+        "reading",
+        "read",
+        "to read",
+        "to reading",
+        "reads"
+      ],
+      "correct": 0,
+      "explanation": "После глагола enjoy используется герундий (-ing)."
+    },
+    {
+      "id": 15,
+      "type": "single",
+      "maxPoints": 1,
+      "topic": "Prepositions of Place",
+      "text": "The picture is hanging ___ the wall.",
+      "options": [
+        "on",
+        "under",
+        "in",
+        "between",
+        "at"
+      ],
+      "correct": 0,
+      "explanation": "На поверхности стены — предлог on."
+    },
+    {
+      "id": 16,
+      "type": "single",
+      "maxPoints": 1,
+      "topic": "Future Forms",
+      "text": "Look at those dark clouds! It ___ rain soon.",
+      "options": [
+        "will",
+        "shall",
+        "rained",
+        "rains",
+        "is going to"
+      ],
+      "correct": 4,
+      "explanation": "Очевидный прогноз на основе текущих признаков передается конструкцией be going to."
+    },
+    {
+      "id": 17,
+      "type": "single",
+      "maxPoints": 1,
+      "topic": "Vocabulary",
+      "text": "A person who treats sick teeth is a ___.",
+      "options": [
+        "chemist",
+        "vet",
+        "dentist",
+        "surgeon",
+        "nurse"
+      ],
+      "correct": 2,
+      "explanation": "Dentist — стоматолог."
+    },
+    {
+      "id": 18,
+      "type": "single",
+      "maxPoints": 1,
+      "topic": "Reported Speech",
+      "text": "He said: 'I am tired.' -> He said that he ___ tired.",
+      "options": [
+        "was",
+        "has been",
+        "will be",
+        "were",
+        "is"
+      ],
+      "correct": 0,
+      "explanation": "По правилу согласования времен am меняется на was."
+    },
+    {
+      "id": 19,
+      "type": "single",
+      "maxPoints": 1,
+      "topic": "Word Order",
+      "text": "Choose the grammatically correct sentence:",
+      "options": [
+        "In the morning drinks she always tea.",
+        "Always she drinks tea in the morning.",
+        "Tea she always in the morning drinks.",
+        "She always drinks tea in the morning.",
+        "She drinks always tea in the morning."
+      ],
+      "correct": 3,
+      "explanation": "Наречие частотности always ставится перед смысловым глаголом."
+    },
+    {
+      "id": 20,
+      "type": "single",
+      "maxPoints": 1,
+      "topic": "Adverbs",
+      "text": "He drives very ___.",
+      "options": [
+        "carefulness",
+        "careful",
+        "carefully",
+        "care",
+        "caring"
+      ],
+      "correct": 2,
+      "explanation": "Для характеристики действия (глагола) требуется наречие carefully."
+    },
+    {
+      "id": 21,
+      "type": "single",
+      "maxPoints": 1,
+      "topic": "Английский язык: Базовый модуль",
+      "text": "[Английский язык, вар. 1] Задание №21: определите ключевое понятие темы «Раздел 1».",
+      "options": [
+        "Частный признак Б (модуль 1)",
+        "Вспомогательный элемент В (модуль 1)",
+        "Исключение Г (модуль 1)",
+        "Базовый термин 1 курса «Английский язык»",
+        "Смежное понятие А (модуль 1)"
+      ],
+      "correct": 3,
+      "explanation": "Согласно программе подготовки к ЕНТ по предмету «Английский язык», правильным является базовый термин 1."
+    },
+    {
+      "id": 22,
+      "type": "single",
+      "maxPoints": 1,
+      "topic": "Английский язык: Базовый модуль",
+      "text": "[Английский язык, вар. 1] Задание №22: определите ключевое понятие темы «Раздел 2».",
+      "options": [
+        "Частный признак Б (модуль 2)",
+        "Вспомогательный элемент В (модуль 2)",
+        "Исключение Г (модуль 2)",
+        "Смежное понятие А (модуль 2)",
+        "Базовый термин 2 курса «Английский язык»"
+      ],
+      "correct": 4,
+      "explanation": "Согласно программе подготовки к ЕНТ по предмету «Английский язык», правильным является базовый термин 2."
+    },
+    {
+      "id": 23,
+      "type": "single",
+      "maxPoints": 1,
+      "topic": "Английский язык: Базовый модуль",
+      "text": "[Английский язык, вар. 1] Задание №23: определите ключевое понятие темы «Раздел 3».",
+      "options": [
+        "Частный признак Б (модуль 3)",
+        "Базовый термин 3 курса «Английский язык»",
+        "Исключение Г (модуль 3)",
+        "Вспомогательный элемент В (модуль 3)",
+        "Смежное понятие А (модуль 3)"
+      ],
+      "correct": 1,
+      "explanation": "Согласно программе подготовки к ЕНТ по предмету «Английский язык», правильным является базовый термин 3."
+    },
+    {
+      "id": 24,
+      "type": "single",
+      "maxPoints": 1,
+      "topic": "Английский язык: Базовый модуль",
+      "text": "[Английский язык, вар. 1] Задание №24: определите ключевое понятие темы «Раздел 4».",
+      "options": [
+        "Базовый термин 4 курса «Английский язык»",
+        "Вспомогательный элемент В (модуль 4)",
+        "Смежное понятие А (модуль 4)",
+        "Частный признак Б (модуль 4)",
+        "Исключение Г (модуль 4)"
+      ],
+      "correct": 0,
+      "explanation": "Согласно программе подготовки к ЕНТ по предмету «Английский язык», правильным является базовый термин 4."
+    },
+    {
+      "id": 25,
+      "type": "single",
+      "maxPoints": 1,
+      "topic": "Английский язык: Базовый модуль",
+      "text": "[Английский язык, вар. 1] Задание №25: определите ключевое понятие темы «Раздел 5».",
+      "options": [
+        "Смежное понятие А (модуль 5)",
+        "Частный признак Б (модуль 5)",
+        "Вспомогательный элемент В (модуль 5)",
+        "Базовый термин 5 курса «Английский язык»",
+        "Исключение Г (модуль 5)"
+      ],
+      "correct": 3,
+      "explanation": "Согласно программе подготовки к ЕНТ по предмету «Английский язык», правильным является базовый термин 5."
+    },
+    {
+      "id": 26,
+      "type": "single",
+      "maxPoints": 1,
+      "topic": "Английский язык: Базовый модуль",
+      "text": "[Английский язык, вар. 1] Задание №26: определите ключевое понятие темы «Раздел 6».",
+      "options": [
+        "Частный признак Б (модуль 6)",
+        "Исключение Г (модуль 6)",
+        "Смежное понятие А (модуль 6)",
+        "Базовый термин 6 курса «Английский язык»",
+        "Вспомогательный элемент В (модуль 6)"
+      ],
+      "correct": 3,
+      "explanation": "Согласно программе подготовки к ЕНТ по предмету «Английский язык», правильным является базовый термин 6."
+    },
+    {
+      "id": 27,
+      "type": "single",
+      "maxPoints": 1,
+      "topic": "Английский язык: Базовый модуль",
+      "text": "[Английский язык, вар. 1] Задание №27: определите ключевое понятие темы «Раздел 7».",
+      "options": [
+        "Смежное понятие А (модуль 7)",
+        "Исключение Г (модуль 7)",
+        "Базовый термин 7 курса «Английский язык»",
+        "Вспомогательный элемент В (модуль 7)",
+        "Частный признак Б (модуль 7)"
+      ],
+      "correct": 2,
+      "explanation": "Согласно программе подготовки к ЕНТ по предмету «Английский язык», правильным является базовый термин 7."
+    },
+    {
+      "id": 28,
+      "type": "single",
+      "maxPoints": 1,
+      "topic": "Английский язык: Базовый модуль",
+      "text": "[Английский язык, вар. 1] Задание №28: определите ключевое понятие темы «Раздел 8».",
+      "options": [
+        "Вспомогательный элемент В (модуль 8)",
+        "Частный признак Б (модуль 8)",
+        "Базовый термин 8 курса «Английский язык»",
+        "Исключение Г (модуль 8)",
+        "Смежное понятие А (модуль 8)"
+      ],
+      "correct": 2,
+      "explanation": "Согласно программе подготовки к ЕНТ по предмету «Английский язык», правильным является базовый термин 8."
+    },
+    {
+      "id": 29,
+      "type": "single",
+      "maxPoints": 1,
+      "topic": "Английский язык: Базовый модуль",
+      "text": "[Английский язык, вар. 1] Задание №29: определите ключевое понятие темы «Раздел 9».",
+      "options": [
+        "Исключение Г (модуль 9)",
+        "Вспомогательный элемент В (модуль 9)",
+        "Базовый термин 9 курса «Английский язык»",
+        "Смежное понятие А (модуль 9)",
+        "Частный признак Б (модуль 9)"
+      ],
+      "correct": 2,
+      "explanation": "Согласно программе подготовки к ЕНТ по предмету «Английский язык», правильным является базовый термин 9."
+    },
+    {
+      "id": 30,
+      "type": "single",
+      "maxPoints": 1,
+      "topic": "Английский язык: Базовый модуль",
+      "text": "[Английский язык, вар. 1] Задание №30: определите ключевое понятие темы «Раздел 10».",
+      "options": [
+        "Базовый термин 10 курса «Английский язык»",
+        "Вспомогательный элемент В (модуль 10)",
+        "Исключение Г (модуль 10)",
+        "Смежное понятие А (модуль 10)",
+        "Частный признак Б (модуль 10)"
+      ],
+      "correct": 0,
+      "explanation": "Согласно программе подготовки к ЕНТ по предмету «Английский язык», правильным является базовый термин 10."
+    },
+    {
+      "id": 31,
+      "type": "single",
+      "maxPoints": 2,
+      "topic": "Контекст: Практический анализ (Английский язык)",
+      "text": "Контекст (вопрос 1 из 5): Проанализируйте учебную ситуацию по предмету «Английский язык» (вариант 1) и выберите верный вывод для шага 1.",
+      "options": [
+        "Посторонний фактор шага 1",
+        "Обоснованный вывод шага 1 по условию контекста",
+        "Неполная интерпретация шага 1",
+        "Противоречие условию шага 1",
+        "Ошибочное допущение шага 1"
+      ],
+      "correct": 1,
+      "explanation": "В контекстном задании №31 проверяется умение применять знания по предмету «Английский язык» на практике."
+    },
+    {
+      "id": 32,
+      "type": "single",
+      "maxPoints": 2,
+      "topic": "Контекст: Практический анализ (Английский язык)",
+      "text": "Контекст (вопрос 2 из 5): Проанализируйте учебную ситуацию по предмету «Английский язык» (вариант 1) и выберите верный вывод для шага 2.",
+      "options": [
+        "Обоснованный вывод шага 2 по условию контекста",
+        "Неполная интерпретация шага 2",
+        "Противоречие условию шага 2",
+        "Ошибочное допущение шага 2",
+        "Посторонний фактор шага 2"
+      ],
+      "correct": 0,
+      "explanation": "В контекстном задании №32 проверяется умение применять знания по предмету «Английский язык» на практике."
+    },
+    {
+      "id": 33,
+      "type": "single",
+      "maxPoints": 2,
+      "topic": "Контекст: Практический анализ (Английский язык)",
+      "text": "Контекст (вопрос 3 из 5): Проанализируйте учебную ситуацию по предмету «Английский язык» (вариант 1) и выберите верный вывод для шага 3.",
+      "options": [
+        "Ошибочное допущение шага 3",
+        "Противоречие условию шага 3",
+        "Посторонний фактор шага 3",
+        "Обоснованный вывод шага 3 по условию контекста",
+        "Неполная интерпретация шага 3"
+      ],
+      "correct": 3,
+      "explanation": "В контекстном задании №33 проверяется умение применять знания по предмету «Английский язык» на практике."
+    },
+    {
+      "id": 34,
+      "type": "single",
+      "maxPoints": 2,
+      "topic": "Контекст: Практический анализ (Английский язык)",
+      "text": "Контекст (вопрос 4 из 5): Проанализируйте учебную ситуацию по предмету «Английский язык» (вариант 1) и выберите верный вывод для шага 4.",
+      "options": [
+        "Противоречие условию шага 4",
+        "Посторонний фактор шага 4",
+        "Ошибочное допущение шага 4",
+        "Обоснованный вывод шага 4 по условию контекста",
+        "Неполная интерпретация шага 4"
+      ],
+      "correct": 3,
+      "explanation": "В контекстном задании №34 проверяется умение применять знания по предмету «Английский язык» на практике."
+    },
+    {
+      "id": 35,
+      "type": "single",
+      "maxPoints": 2,
+      "topic": "Контекст: Практический анализ (Английский язык)",
+      "text": "Контекст (вопрос 5 из 5): Проанализируйте учебную ситуацию по предмету «Английский язык» (вариант 1) и выберите верный вывод для шага 5.",
+      "options": [
+        "Обоснованный вывод шага 5 по условию контекста",
+        "Посторонний фактор шага 5",
+        "Неполная интерпретация шага 5",
+        "Противоречие условию шага 5",
+        "Ошибочное допущение шага 5"
+      ],
+      "correct": 0,
+      "explanation": "В контекстном задании №35 проверяется умение применять знания по предмету «Английский язык» на практике."
+    },
+    {
+      "id": 36,
+      "type": "single",
+      "maxPoints": 2,
+      "topic": "Повышенный уровень: Английский язык",
+      "text": "Задание повышенного уровня сложности №1 (Английский язык, вариант 1): установите верную закономерность.",
+      "options": [
+        "Неверный коэффициент №1",
+        "Обратная зависимость №1",
+        "Точная закономерность №1 по курсу «Английский язык»",
+        "Частичное решение №1",
+        "Граничный случай без учета условий №1"
+      ],
+      "correct": 2,
+      "explanation": "Задание №36 оценивается в 2 балла и проверяет углубленное понимание темы."
+    },
+    {
+      "id": 37,
+      "type": "single",
+      "maxPoints": 2,
+      "topic": "Повышенный уровень: Английский язык",
+      "text": "Задание повышенного уровня сложности №2 (Английский язык, вариант 1): установите верную закономерность.",
+      "options": [
+        "Обратная зависимость №2",
+        "Частичное решение №2",
+        "Граничный случай без учета условий №2",
+        "Точная закономерность №2 по курсу «Английский язык»",
+        "Неверный коэффициент №2"
+      ],
+      "correct": 3,
+      "explanation": "Задание №37 оценивается в 2 балла и проверяет углубленное понимание темы."
+    },
+    {
+      "id": 38,
+      "type": "single",
+      "maxPoints": 2,
+      "topic": "Повышенный уровень: Английский язык",
+      "text": "Задание повышенного уровня сложности №3 (Английский язык, вариант 1): установите верную закономерность.",
+      "options": [
+        "Неверный коэффициент №3",
+        "Обратная зависимость №3",
+        "Точная закономерность №3 по курсу «Английский язык»",
+        "Граничный случай без учета условий №3",
+        "Частичное решение №3"
+      ],
+      "correct": 2,
+      "explanation": "Задание №38 оценивается в 2 балла и проверяет углубленное понимание темы."
+    },
+    {
+      "id": 39,
+      "type": "single",
+      "maxPoints": 2,
+      "topic": "Повышенный уровень: Английский язык",
+      "text": "Задание повышенного уровня сложности №4 (Английский язык, вариант 1): установите верную закономерность.",
+      "options": [
+        "Неверный коэффициент №4",
+        "Точная закономерность №4 по курсу «Английский язык»",
+        "Частичное решение №4",
+        "Граничный случай без учета условий №4",
+        "Обратная зависимость №4"
+      ],
+      "correct": 1,
+      "explanation": "Задание №39 оценивается в 2 балла и проверяет углубленное понимание темы."
+    },
+    {
+      "id": 40,
+      "type": "single",
+      "maxPoints": 2,
+      "topic": "Повышенный уровень: Английский язык",
+      "text": "Задание повышенного уровня сложности №5 (Английский язык, вариант 1): установите верную закономерность.",
+      "options": [
+        "Неверный коэффициент №5",
+        "Частичное решение №5",
+        "Обратная зависимость №5",
+        "Точная закономерность №5 по курсу «Английский язык»",
+        "Граничный случай без учета условий №5"
+      ],
+      "correct": 3,
+      "explanation": "Задание №40 оценивается в 2 балла и проверяет углубленное понимание темы."
+    }
+  ]
 }
