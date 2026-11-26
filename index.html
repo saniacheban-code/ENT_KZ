@@ -1,237 +1,296 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ЕНТ Тренажер</title>
-    
-    <!-- Подключаем стили KaTeX для красивых формул -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="renderMath();"></script>
-
-    <style>
-        :root {
-            --primary-color: #1a73e8;
-            --success-color: #34a853;
-            --error-color: #ea4335;
-            --bg-color: #f8f9fa;
-            --card-bg: #ffffff;
-            --text-color: #202124;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            margin: 0;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 850px;
-            margin: 0 auto;
-            background: var(--card-bg);
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        }
-
-        h1, h2, h3 {
-            color: #1f1f1f;
-        }
-
-        button {
-            cursor: pointer;
-            border: none;
-            border-radius: 6px;
-            font-weight: 500;
-            transition: background 0.2s;
-        }
-
-        .btn-primary {
-            background: var(--primary-color);
-            color: white;
-            padding: 12px 24px;
-            font-size: 16px;
-        }
-
-        .btn-primary:hover {
-            background: #1557b0;
-        }
-
-        .btn-success {
-            background: var(--success-color);
-            color: white;
-            padding: 14px 28px;
-            font-size: 16px;
-        }
-
-        .btn-success:hover {
-            background: #2b8042;
-        }
-
-        .btn-secondary {
-            background: #f1f3f4;
-            color: #3c4043;
-            padding: 10px 18px;
-            font-size: 14px;
-        }
-
-        .btn-secondary:hover {
-            background: #e8eaed;
-        }
-
-        .subject-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .subject-card {
-            background: #fff;
-            border: 1px solid #dadce0;
-            padding: 20px;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: transform 0.1s, box-shadow 0.2s;
-        }
-
-        .subject-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-            border-color: var(--primary-color);
-        }
-
-        .question-block {
-            background: #fff;
-            border: 1px solid #e0e0e0;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-        }
-
-        .option-label {
-            display: flex;
-            align-items: center;
-            margin: 10px 0;
-            padding: 10px;
-            border-radius: 6px;
-            border: 1px solid #e8eaed;
-            cursor: pointer;
-            transition: background 0.1s;
-        }
-
-        .option-label:hover {
-            background: #f1f3f4;
-        }
-
-        .option-label input {
-            margin-right: 12px;
-            transform: scale(1.1);
-        }
-
-        .result-card {
-            margin-bottom: 20px;
-            padding: 20px;
-            border-radius: 8px;
-            border: 1px solid #dadce0;
-        }
-
-        .result-card.correct {
-            background: #e6f4ea;
-            border-color: #ceead6;
-        }
-
-        .result-card.incorrect {
-            background: #fce8e6;
-            border-color: #fadcbc;
-        }
-
-        .explanation-box {
-            margin-top: 12px;
-            padding: 12px;
-            background: #ffffff;
-            border-left: 4px solid;
-            border-radius: 4px;
-        }
-
-        .correct .explanation-box { border-left-color: var(--success-color); }
-        .incorrect .explanation-box { border-left-color: var(--error-color); }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Тренажер ЕНТ — Подготовка по предметам</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: #f3f5f8;
+      color: #1f2937;
+      line-height: 1.5;
+    }
+    .page-wrap {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 24px 16px 48px;
+    }
+    .site-header {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+      cursor: pointer;
+    }
+    .site-header h1 {
+      margin: 0 0 4px;
+      font-size: 24px;
+      color: #111827;
+    }
+    .site-header p {
+      margin: 0;
+      color: #4b5563;
+      font-size: 14px;
+    }
+    .panel {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+    }
+    .panel h2 {
+      margin: 0 0 6px;
+      font-size: 20px;
+    }
+    .subtitle {
+      margin: 0 0 18px;
+      color: #6b7280;
+      font-size: 14px;
+    }
+    .subjects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 12px;
+    }
+    .subject-card {
+      text-align: left;
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 14px 16px;
+      cursor: pointer;
+      transition: border-color 0.15s, background-color 0.15s;
+    }
+    .subject-card:hover {
+      border-color: #2563eb;
+      background: #eff6ff;
+    }
+    .subject-title {
+      font-weight: 600;
+      font-size: 15px;
+      color: #111827;
+      margin-bottom: 4px;
+    }
+    .subject-meta {
+      font-size: 12px;
+      color: #6b7280;
+    }
+    .variants-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+    .actions-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+    .bottom-actions {
+      margin-top: 24px;
+      padding-top: 16px;
+      border-top: 1px solid #e5e7eb;
+    }
+    .btn {
+      border: none;
+      border-radius: 8px;
+      padding: 10px 16px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .btn-primary {
+      background: #2563eb;
+      color: #ffffff;
+    }
+    .btn-primary:hover {
+      background: #1d4ed8;
+    }
+    .btn-primary:disabled {
+      background: #93c5fd;
+      cursor: not-allowed;
+    }
+    .btn-secondary {
+      background: #e5e7eb;
+      color: #1f2937;
+    }
+    .btn-secondary:hover {
+      background: #d1d5db;
+    }
+    .quiz-topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+    .question-card {
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 16px;
+      margin-bottom: 14px;
+      background: #ffffff;
+    }
+    .question-header {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 12px;
+      color: #6b7280;
+      margin-bottom: 8px;
+    }
+    .question-num {
+      font-weight: 700;
+      color: #2563eb;
+    }
+    .question-text {
+      font-size: 15px;
+      font-weight: 500;
+      margin-bottom: 12px;
+      color: #111827;
+    }
+    .options-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .option-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      padding: 10px 12px;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      cursor: pointer;
+      background: #fafafa;
+      font-size: 14px;
+    }
+    .option-item.selected {
+      border-color: #2563eb;
+      background: #eff6ff;
+    }
+    .option-item.correct-option {
+      border-color: #16a34a;
+      background: #dcfce7;
+    }
+    .option-item.wrong-option {
+      border-color: #dc2626;
+      background: #fee2e2;
+    }
+    .option-letter {
+      font-weight: 700;
+      min-width: 20px;
+    }
+    .explanation-box {
+      margin-top: 12px;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 13px;
+    }
+    .exp-ok {
+      background: #f0fdf4;
+      border: 1px solid #86efac;
+      color: #14532d;
+    }
+    .exp-err {
+      background: #fef2f2;
+      border: 1px solid #fca5a5;
+      color: #7f1d1d;
+    }
+    .exp-text {
+      margin-top: 6px;
+    }
+    .result-summary {
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin-bottom: 20px;
+    }
+    .result-summary h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+    .result-summary p {
+      margin: 4px 0;
+    }
+    .error-text {
+      color: #b91c1c;
+      font-weight: 600;
+    }
+    .stats-box {
+      margin-top: 24px;
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 16px 20px;
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+      text-align: center;
+      font-size: 14px;
+      color: #4b5563;
+    }
+    .stats-grid {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+  </style>
 </head>
 <body>
+  <div class="page-wrap">
+    <header class="site-header" onclick="renderSubjects()">
+      <h1>Тренажер ЕНТ</h1>
+      <p>Практические варианты с проверкой ответов и пояснениями</p>
+    </header>
 
-    <div class="container" id="app">
-        <div id="test-container">
-            <h2 style="text-align: center;">Загрузка тренажера...</h2>
-        </div>
-    </div>
+    <main id="app"></main>
 
-    <!-- Функция рендеринга формул KaTeX -->
-    <script>
-        function renderMath() {
-            if (typeof renderMathInElement !== 'undefined') {
-                renderMathInElement(document.body, {
-                    delimiters: [
-                        {left: "$$", right: "$$", display: true},
-                        {left: "$", right: "$", display: false}
-                    ],
-                    throwOnError: false
-                });
-            }
-        }
-    </script>
+    <section class="stats-box" aria-label="Статистика посещений">
+      <strong>📊 Статистика посещений</strong>
+      <div class="stats-grid">
+        <span>Сегодня: <b id="stat-day">1</b></span>
+        <span>За месяц: <b id="stat-month">1</b></span>
+        <span>Всего: <b id="stat-total">1</b></span>
+      </div>
+    </section>
+  </div>
 
-    <script src="registry.js"></script>
-    <script src="app.js"></script>
-    <div id="visitor-stats" style="margin: 30px auto; padding: 15px; max-width: 500px; background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 8px; text-align: center; font-family: sans-serif;">
-    <h4 style="margin: 0 0 10px 0; color: #495057; font-size: 15px;">📊 Статистика посещений тренажера</h4>
-    <div style="display: flex; justify-content: space-around; font-size: 13px; color: #6c757d;">
-        <div>Сегодня: <b id="stat-day" style="color: #007bff;">1</b></div>
-        <div>За месяц: <b id="stat-month" style="color: #28a745;">1</b></div>
-        <div>Всего визитов: <b id="stat-total" style="color: #dc3545;">1</b></div>
-    </div>
-</div>
+  <script src="registry.js"></script>
+  <script src="app.js"></script>
+  <script>
+    (function updateVisitStats() {
+      const now = new Date();
+      const dayKey = now.toISOString().slice(0, 10);
+      const monthKey = now.toISOString().slice(0, 7);
+      const stored = JSON.parse(localStorage.getItem("ent_trainer_visits_v1") || "{}");
 
-<script>
-    // Простая логика подсчета визитов через localStorage
-    function initVisitorCounter() {
-        let stats = JSON.parse(localStorage.getItem('ent_visitor_stats') || '{"day": 0, "month": 0, "total": 0, "lastDate": ""}');
-        
-        let todayStr = new Date().toDateString(); // текущая дата (например, "Thu Nov 12 2026")
-        let currentMonth = new Date().getMonth(); // текущий месяц
+      const dayCount = (stored.dayKey === dayKey ? (stored.dayCount || 0) : 0) + 1;
+      const monthCount = (stored.monthKey === monthKey ? (stored.monthCount || 0) : 0) + 1;
+      const totalCount = (stored.totalCount || 0) + 1;
 
-        // Если сменился день — сбрасываем счетчик «сегодня» (или инкрементируем для каждого уникального сеанса)
-        if (stats.lastDate !== todayStr) {
-            stats.day = 1;
-            stats.lastDate = todayStr;
-            stats.total += 1;
-            stats.month += 1;
-        } else {
-            // Если тот же день, но пользователь открыл сайт повторно или обновил страницу
-            // Защита от накрутки F5: считаем за новый визит только если прошло больше 30 минут, либо просто считаем клики
-            let lastVisitTime = localStorage.getItem('ent_last_visit_time') || 0;
-            let now = new Date().getTime();
-            
-            if (now - lastVisitTime > 30 * 60 * 1000) { // 30 минут
-                stats.day += 1;
-                stats.total += 1;
-                localStorage.setItem('ent_last_visit_time', now);
-            }
-        }
+      const updated = {
+        dayKey,
+        dayCount,
+        monthKey,
+        monthCount,
+        totalCount
+      };
+      localStorage.setItem("ent_trainer_visits_v1", JSON.stringify(updated));
 
-        localStorage.setItem('ent_visitor_stats', JSON.stringify(stats));
-
-        // Выводим данные на экран
-        document.getElementById('stat-day').innerText = stats.day;
-        document.getElementById('stat-month').innerText = stats.month > 0 ? stats.month : 1;
-        document.getElementById('stat-total').innerText = stats.total > 0 ? stats.total : 1;
-    }
-
-    // Запускаем при загрузке страницы
-    window.addEventListener('DOMContentLoaded', initVisitorCounter);
-</script>
+      const elDay = document.getElementById("stat-day");
+      const elMonth = document.getElementById("stat-month");
+      const elTotal = document.getElementById("stat-total");
+      if (elDay) elDay.textContent = String(dayCount);
+      if (elMonth) elMonth.textContent = String(monthCount);
+      if (elTotal) elTotal.textContent = String(totalCount);
+    })();
+  </script>
 </body>
 </html>
